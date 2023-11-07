@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.col-md-6 {
+  width: 50%;
+}
+/*
+.col-md-4 {
+  width: 24%;
+}
+
+.col-md-3 {
+  width: 25%;
+}
+*/
+img{
+  max-width: 100%;
+}
+
+/* Navbar styles and other styles (retain your existing styles) */
+
+
+/* For screens between 769px and 1200px wide (tablets) */
+@media only screen and (min-width: 765px) and (max-width: 2000px) {
+  .col-md-4{
+    width: 24%;
+  }
+}
+
+@media only screen and (min-width:451) and (max-width:764){
+  .col-md-4{
+    width: 100%;
+  }
+}
+
+
+@media (max-width:450px){
+  .col-md-4{
+    width:60%;
+  }
+}

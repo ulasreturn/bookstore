@@ -1,0 +1,66 @@
+<div class="header">
+  <div class="container">
+  <app-navbar></app-navbar>
+ 
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <div class="col-2">
+              <img src="assets/images/image1.png" width="100%">
+            </div>
+            <!-- İstediğiniz diğer içerikler buraya gelebilir -->
+          </div>
+          
+  
+
+
+
+
+
+<div class="fcf-body">
+
+    <div id="fcf-form">
+    <h3 class="fcf-h3">Contact us</h3>
+
+    <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+        
+        <div class="fcf-form-group">
+            <label for="Name" class="fcf-label">Your E-mail</label>
+            <div class="fcf-input-group">
+                <input type="text"  [(ngModel)]="contactRequest.subject"  [ngModelOptions]="{standalone: true}" id="Name" name="Name" class="fcf-form-control" required>
+            </div>
+        </div>
+
+        <!--<div class="fcf-form-group">
+            <label for="Email" class="fcf-label">Your email address</label>
+            <div class="fcf-input-group">
+                <input type="email" [(ngModel)]="contactRequest.recepients" [ngModelOptions]="{standalone: true}" id="Email" name="Email" class="fcf-form-control" required>
+            </div>
+        </div>--> 
+
+        <div class="fcf-form-group">
+            <label for="Message" class="fcf-label">Your message</label>
+            <div class="fcf-input-group">
+                <textarea id="Message" [(ngModel)]="contactRequest.body" [ngModelOptions]="{standalone: true}" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+            </div>
+        </div>
+
+        <div class="fcf-form-group">
+            <button type="submit" (click)="sendingMail()" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block">Send Message</button>
+        </div>
+
+        <div class="fcf-credit" id="fcf-credit">
+        İletişime Geçin Yardımcı Olalım! <a href="" target="_blank">KİTAPCIM</a>
+        </div>
+
+    </form>
+    </div>
+
+</div>
+</div>
+</div>
+</div>
+<app-chatbot></app-chatbot>
+<app-footer></app-footer>
+<p-toast position="top-right"></p-toast>  
+

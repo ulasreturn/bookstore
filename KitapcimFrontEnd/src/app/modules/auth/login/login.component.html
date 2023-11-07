@@ -1,0 +1,77 @@
+<div class="header">
+    <div class="container">
+    <app-navbar></app-navbar>
+   
+        <div class="container">
+          <div class="row">
+            <div class="col-2">
+              <div class="col-2">
+                <img src="assets/images/image1.png" width="100%">
+              </div>
+              <!-- İstediğiniz diğer içerikler buraya gelebilir -->
+            </div>
+            
+    <div class="col-2">
+      
+        <div class="form-container">
+          
+          <div class="form-btn">
+            <span [ngClass]="{'active': showLogin}" (click)="showLogin = false; updateIndicatorPosition()">Login</span>
+                  <span [routerLink]="['/register']" [ngClass]="{'active': !showLogin}" (click)="showLogin = false; updateIndicatorPosition()">Register</span>
+                  <div id="Indicator" [ngStyle]="{'transform': 'translateX(' + indicatorPosition + '%)'}"></div>
+          </div>
+          
+          
+          <form *ngIf="showLogin" (submit)="login()">
+                
+            
+            <input [(ngModel)]="loginRequest.email" name="UserName" [ngModelOptions]="{standalone: true}" type="email" placeholder="Email">
+            <input [(ngModel)]="loginRequest.PasswordSalt" name="Password" [ngModelOptions]="{standalone: true}" type="password" placeholder="Password">
+            <button id="loginBtn" type="button" class="btn btn-primary btn-block mb-4" (click)="login()">Login</button>
+             <a href="#"(click)="showForgotPasswordForm($event)">Forget Password</a>
+    
+    <!-- Unutulan Parola Formu -->
+          
+            
+          </form>
+          <div class="container">
+            <!-- Diğer içerikler -->
+          
+           
+          
+            <div *ngIf="showForgotPassword" class="form-forgot">
+              
+              <p>E-mail adresinizi girin</p>
+              <input [(ngModel)]="enteredEmail" type="text" placeholder="E-mail">
+              
+              
+              <button id="forgotPasswordBtn" type="button" class="btn btn-primary btn-block mb-4" (click)="confirmToSend()" >Gönder</button>
+              <button id="forgotPasswordBtn" type="button" class="btn btn-primary btn-block mb-4" [ngClass]="{'active': showLogin}" (click)="showLogin = true; showForgotPassword=false; updateIndicatorPosition()">Vazgeç</button>
+              
+            </div>
+          
+          
+          <div *ngIf="referenceCodeForm" class="form-forgot">
+            <p>Lütfen Mail'inize gönderilen referans kodunu girin! </p>
+            <input [(ngModel)]="enteredCode" name="referencecode" type="text"  placeholder="Reference Code">
+            <button id="referencecodebtn" type="button" class="btn btn-primary btn-block mb-4" (click)="showResetPasswordCodeInput()" >Sıfırlamak İçin Tıkla!</button>
+          
+          </div>
+          <div *ngIf="passwordChangeForm" class="form-forgot">
+            <p>Parolanızı sıfırlayın! </p>
+            <input type="text" class="form-control" id="booksId" [(ngModel)]="emailrequest.Email" [ngModelOptions]="{standalone: true}"disabled >
+            <input [(ngModel)]="emailrequest.Password" name="Password" [ngModelOptions]="{standalone: true}" type="password" placeholder="Password">
+            <button id="referencecodebtn" type="button" class="btn btn-primary btn-block mb-4" (click)="passwordChange()" [class.hidden-button]="passwordUpdated">Sıfırla!</button>
+          
+          </div>
+         
+        </div>
+    </div>
+          </div>
+        </div>
+    </div>
+    </div>
+    
+    <app-chatbot></app-chatbot>
+          <app-footer></app-footer> 
+          <p-toast position="top-right"></p-toast>       

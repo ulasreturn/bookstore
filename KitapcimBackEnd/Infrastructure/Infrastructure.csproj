@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Postgres\Migrations\20231005230141_mig4.cs" />
+    <Compile Remove="Data\Postgres\Migrations\20231005230141_mig4.Designer.cs" />
+    <Compile Remove="Data\Postgres\Migrations\20231005232213_mig5.cs" />
+    <Compile Remove="Data\Postgres\Migrations\20231005232213_mig5.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.5" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\Postgres\Migrations\" />
+  </ItemGroup>
+
+</Project>

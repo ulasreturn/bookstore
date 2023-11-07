@@ -1,0 +1,99 @@
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  color: #333;
+  font-size: 14px;
+}
+
+
+.projcard-container {
+  margin: 50px 0;
+  box-sizing: border-box;
+  width: 100%; /* container 100% */
+}
+
+
+.projcard {
+  width: 100%; /* her bir card 100% genişliğinde*/
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  font-size: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 4px 21px -12px rgba(0, 0, 0, 0.66);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  display: flex;
+  height: 40vh;
+  justify-content: space-between;
+}
+
+
+
+
+
+.projcard-img {
+  width: 30%; /* resim css*/
+  max-width: 100%; /* resim width */
+}
+
+
+.projcard-textbox {
+  width: 70%; /* Scard içindeki yazı */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-around;
+}
+
+.projcard-title {
+  font-family: 'Voces', 'Open Sans', Arial, sans-serif;
+  font-size: 24px;
+}
+
+.projcard-description {
+  font-size: 15px;
+  color: #424242;
+}
+.projcard-innerbox{
+  display: flex;
+}
+
+
+@media (max-width: 768px) {
+  .projcard {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+
+
+
+@media (max-width: 450px) {
+  .projcard {
+    margin-bottom: 5px;
+  }
+ .projcard-innerbox{
+  display: block;
+  margin: auto;
+ }
+  .projcard-img {
+    height: 20vh;
+    width:50vh;
+    margin: auto;
+
+  }
+
+  .projcard-textbox {
+    padding: 5px;
+  }
+
+  .projcard-title {
+    font-size: 18px;
+  }
+
+  .projcard-description {
+    font-size: 13px;
+  }
+}

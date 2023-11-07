@@ -1,0 +1,11 @@
+*{
+    box-sizing: border-box;
+  }
+  .cart-info{
+    margin: 0  !important;
+    padding: 0  !important;
+  }
+  img{
+    width: 15vh;
+    height: 20vh;
+  }

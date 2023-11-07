@@ -1,0 +1,75 @@
+/* Kalp simgesinin stillemesi*/
+.heart-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: white;
+  font-size: 24px;
+  z-index: 1;
+}
+
+/* Ürün resminin stillemesi (Opsiyonel) */
+.product-link{
+  position: relative;
+  display: inline-block;
+}
+
+.product-link img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.margin-top{
+  margin-top: 30px;
+}
+.row{
+  display: flex;
+  align-items: center;
+  flex-wrap:wrap;
+  justify-content: space-around;
+}
+
+.col-3{
+  margin-right: 4%;
+}
+body{
+  margin:0;
+  overflow-x:hidden;
+  }
+  .slideshow-my {
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0%; /* Sayfanın tamamını kaplamak için */
+}
+/*
+@media screen and (max-width: 768px) {
+  .col-3 {
+    flex: 0 0 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+
+  .mySlides1 {
+    padding: 10px;
+  }
+}
+*/
+@media  (max-width: 480px) {
+  .col-md4 {
+    margin: 0;
+    width: 65%;
+  }}
+
+  @media ((min-width:481px) and (max-width:1000px)){
+    .col-md4 {
+      width:45%;
+    }
+  }
+  @media((min-width:1001px)){
+    .col-md4{
+      width: 24%;
+    }
+  }

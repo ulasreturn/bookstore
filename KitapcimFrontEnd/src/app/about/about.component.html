@@ -1,0 +1,40 @@
+<div class="header">
+    <div class="container">
+    <app-navbar></app-navbar>
+    <div class="content">
+        <h1>KİTAPCIM'ın Amacı ve İçeriği</h1>
+        <p> Kitapcım, okurseverlere ikinci el kitap satın almayı ve satmayı kolaylaştıran bir e-ticaret platformudur.</p>
+            <p>Ayrıca, KITAPCIM kitapların raflarda tozlanmamasını sağlamak ve uygun fiyatlarla paylaşıma açık olmasını teşvik etmek amacıyla okursevenlere kolaylık sunar.</p>
+    </div>
+    
+    <h2  class="titlenew">Ekibimiz</h2>
+    <div class="kart-container">
+        <div class="kart">
+            
+            <img src="assets/images/linkedin1.png" alt="Profil Fotoğrafı">
+            <h2>Ulaş Ergin</h2>
+            <p>ulas.ergin15@hotmail.com</p>
+        </div>
+
+        <div class="kart">
+            <img src="assets/images/linkedin2.png" alt="Profil Fotoğrafı">
+            <h2>Mustafa Onur Durgun</h2>
+            <p>mustafaonurdurgun@gmail.com</p>
+        </div>
+
+        <div class="kart">
+            <img src="assets/images/linkedin3.png" alt="Profil Fotoğrafı">
+            <h2>Pelda Petekkaya</h2>
+            <p>peldapetekkayaa@gmail.com</p>
+        </div>
+    </div>
+    <div class="content">
+        <h1>Yardım ve İletişim</h1> 
+       
+           <a [routerLink]="['/contact']"><li>İletişim için tıklayın!</li></a>
+           <a [routerLink]="['/bagis']"><li>Kitap bağışı için tıklayın!</li></a>
+        
+    </div>
+    </div>
+<app-chatbot></app-chatbot>
+<app-footer></app-footer>

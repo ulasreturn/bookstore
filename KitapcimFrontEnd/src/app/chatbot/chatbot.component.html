@@ -1,0 +1,24 @@
+<div class="content">
+  <!-- Diğer içerikler burada -->
+
+  <!-- Chatbot toggle button -->
+  <button class="chatbot-toggle" (click)="toggleChatbot()">{{ chatbotActive ? 'Kapat' : 'Chatbot' }}</button>
+
+  <!-- Chatbot container -->
+  <div class="chatbot-container" [class.active]="chatbotActive">
+    <ng-container *ngFor="let message of messages">
+      <div class="message"
+           [ngClass]="{ 'from': message.author === 'bot', 'to': message.author === 'user' }">
+        {{ message.content }}
+      </div>
+    </ng-container>
+    <label *ngIf="messages.length === 0; else dialogInfo" for="nameField">Your message</label>
+    <div class="input-container">
+      <input [(ngModel)]="value" (keyup.enter)="sendMessage()" type="text">
+      <button (click)="sendMessage()">Send</button>
+    </div>
+    <ng-template #dialogInfo>
+      <span class="float-right">Total messages: {{ messages.length }}</span>
+    </ng-template>
+  </div>
+</div>

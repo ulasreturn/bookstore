@@ -1,0 +1,94 @@
+.content {
+  /* Diğer içeriklerin stilini burada belirleyin */
+  position: relative;
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  display: none;
+  z-index: 1;
+}
+
+.chatbot-container.active {
+  display: block;
+}
+
+.message {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.from {
+  background-color: #ffff00;
+  text-align: left;
+}
+
+.to {
+  background-color: #6598ff;
+  color: #fff;
+  text-align: right;
+}
+
+label {
+  font-weight: bold;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column; /* Inputları sıralı bir şekilde görüntülemek için */
+}
+
+input {
+  padding: 5px;
+  border: 1px solid #7694ff;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+button {
+  width: 80px;
+  padding: 5px 10px;
+  background-color: #4800ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.float-right {
+  float: right;
+  border-radius: 60%;
+}
+/* Diğer stiller burada */
+
+.chatbot-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #0a0a0a;
+  color: #fff;
+  border:none;
+  border-bottom-right-radius: 50%;/* Yuvarlak yapmak için burayı değiştirin */
+  padding: 5px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+@media (max-width: 1025px) {
+  .chatbot-toggle{
+    display: none !important;
+  }
+  .chatbot-container {
+    display: none !important;
+}
+}
